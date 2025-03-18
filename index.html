@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto JBL</title>
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', 'SEU_PIXEL_ID_AQUI');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- Fim do Facebook Pixel -->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Centraliza e mantém o layout responsivo */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Evita rolagem horizontal */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Ajusta espaçamento da row */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Mantém o aside fixo no desktop */
+        .sticky-aside {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-brands {
+            border-top: 1px solid #666;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que as imagens quebrem linha se necessário */
+            justify-content: center;
+            /* Centraliza as imagens */
+            align-items: center;
+            /* Alinha verticalmente */
+            gap: 20px;
+            /* Espaço entre as imagens */
+            max-width: 100%;
+            /* Garante que o conteúdo não ultrapasse o footer */
+            overflow: hidden;
+            /* Evita que as imagens fiquem para fora */
+
+        }
+
+        .footer-brands img {
+            max-width: 120px;
+            /* Define um tamanho máximo para evitar imagens grandes */
+            height: auto;
+            /* Mantém a proporção da imagem */
+        }
+
+
+        /* Ajusta a posição do botão fixo de compra */
+        .fixed-buy-btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajustes para mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #carouselProduto .carousel-inner img {
+                width: 100vw;
+                height: 50vh;
+                object-fit: contain;
+            }
+
+            /* Exibe a seção de informações adicionais apenas no mobile */
+            .mobile-info {
+                display: block;
+                text-align: left;
+                padding: 20px 0;
+            }
+
+            .mobile-info i {
+                font-size: 2.5rem;
+                color: #ff3300;
+                border: 2px solid #ff3300;
+                border-radius: 50%;
+                padding: 10px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-info {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Barra promocional -->
+        <div class="bg-light text-center py-2 border-bottom border-danger">
+            <div class="container d-flex justify-content-between align-items-center">
+                <p class="mb-0 fw-bold">Receba 5% OFF adicional na sua primeira compra com o cupom
+                    <span class="fw-bold text-danger">BEMVINDO</span>
+                </p>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="#" class="text-dark text-decoration-none fw-semibold">Compra Original</a>
+
+                    <!-- Dropdown Descubre JBL -->
+                    <div class="dropdown">
+                        <a class="text-dark text-decoration-none fw-semibold dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Descubre JBL
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Blog JBL</a></li>
+                            <li><a class="dropdown-item" href="index.html">Página de Benefícios</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="index.html" class="text-dark text-decoration-none fw-semibold">Nuestra Historia</a>
+
+                    <!-- Dropdown Soporte -->
+                    <div class="dropdown">
+                        <a class="text-dark text-decoration-none fw-semibold dropdown-toggle" href="index.html"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Soporte
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Servicio al Cliente</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/logo.svg" alt="Logo" width="60px" height="60px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="index.html" role="button"
+                                data-bs-toggle="dropdown">Parlantes</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Portáteis</a></li>
+                                <li><a class="dropdown-item" href="index.html">De Festa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Audifonos</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Audio para Hogar</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Gaming</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-danger" href="index.html">Ofertas</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Lanzamientos JBL</a></li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                        <i class="fa-solid fa-user fs-5"></i>
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Caminho de navegação -->
+    <div class="container mt-3">
+        <p class="text-secondary"><strong>Home</strong> > <strong>Parlantes</strong> > JBL Boombox 3</p>
+    </div>
+
+    <!-- Estrutura principal -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Conteúdo principal -->
+            <main class="col-lg-8">
+                <!-- Carousel de imagens -->
+                <div id="carouselProduto" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/p1.png" class="d-block mx-auto img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/p2.png" class="d-block mx-auto img-fluid">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduto"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduto"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Miniaturas do produto -->
+                <div class="d-flex justify-content-center mt-2 gap-2">
+                    <img src="img/p2.png" class="img-thumbnail" width="60px" height="60px" onclick="trocarImagem(0)">
+                    <img src="img/3_JBL_BOOMBOX_3_BACK_33206_x2.png" width="60px" height="60px" class="img-thumbnail"
+                        onclick="trocarImagem(1)">
+                    <img src="img/4_JBL_BOOMBOX_3_TOP_BLACK_33253_x2.png" width="60px" height="60px"
+                        class="img-thumbnail" onclick="trocarImagem(2)">
+                    <img src="img/5_JBL_BOOMBOX_3_RIGHT_BLACK_33243_x2.png" width="60px" height="60px"
+                        class="img-thumbnail" onclick="trocarImagem(3)">
+                    <img src="img/JBL_BOOMBOX_3_BOTTOM_BLACK_33256_x2.png" width="60px" height="60px"
+                        class="img-thumbnail" onclick="trocarImagem(4)">
+                </div>
+
+                <!-- Seção de informações adicionais para Mobile -->
+                <div class="mobile-info d-lg-none text-left">
+                    <p><strong>Hasta 12 cuotas sin interés de S/9,08 con tarjeta de crédito</strong></p>
+                    <p class="text-success">Pagos con débito o crédito envío gratis en 24 horas a todo el Perú 🚚 </p>
+                    <div class="d-flex justify-content-around text-center">
+                        <div>
+                            <i class="fa fa-shipping-fast"></i>
+                            <p>Servicio de entrega</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-sync-alt"></i>
+                            <p>Garantia de fábrica</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-headset"></i>
+                            <p>Soporte en línea gratuito</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Características -->
+                <section class="container mt-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Características</h2>
+                        <div class="bg-danger mx-auto" style="width: 60px; height: 3px;"></div>
+                    </div>
+
+                    <!-- Primeira Característica -->
+                    <div class="row align-items-center g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-center">
+                                <img src="./img/caracteristicas.png" class="img-fluid rounded shadow-lg"
+                                    alt="JBL Boombox 3 com pessoas ao ar livre">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-light rounded shadow-sm">
+                                <h3 class="fw-bold">Sonido arrollador y graves más profundos</h3>
+                                <p class="text-muted">
+                                    Disfruta de tu música con el arrollador JBL Original Pro Sound. Estos nuevos
+                                    altavoces de 3 vías ofrecen nuestro diseño acústico con una mayor sensibilidad, que
+                                    mejora la nitidez a la vez que reduce la distorsión de los graves más intensos y un
+                                    amplio espectro de audio, sin importar cuánto subas el volumen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda Característica -->
+                    <div class="row align-items-center g-4 mb-5">
+                        <div class="col-md-6 order-md-2">
+                            <div class="d-flex justify-content-center">
+                                <img src="./img/caracteristicas2.png" class="img-fluid rounded shadow-lg"
+                                    alt="JBL Boombox 3 sobre um muro colorido">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <div class="p-4 bg-light rounded shadow-sm">
+                                <h3 class="fw-bold">24 horas de batería</h3>
+                                <p class="text-muted">
+                                    Celebra cada momento con los sonidos que más te gustan. Desde el entrenamiento de la
+                                    mañana hasta la cita nocturna con tus amigos, hemos añadido 24 horas de batería para
+                                    que no pierdas el ritmo durante todo el día.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terceira Característica -->
+                    <div class="row align-items-center g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-center">
+                                <img src="./img/caracteristicas3.png" class="img-fluid rounded shadow-lg"
+                                    alt="JBL Boombox 3 resistente à água">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-light rounded shadow-sm">
+                                <h3 class="fw-bold">Resistente à água e poeira</h3>
+                                <p class="text-muted">
+                                    O JBL Boombox 3 é projetado para acompanhar seu estilo de vida, independentemente do
+                                    ambiente. Com certificação IP67, ele é resistente à água e poeira, permitindo que
+                                    você aproveite sua música sem preocupações, seja na piscina, na praia ou em qualquer
+                                    aventura ao ar livre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quarta Característica - Seção com Ícones -->
+                    <div class="row text-center g-4">
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <div class="text-white p-3">
+                                    <img src="./img/icon-1.png" width="60px" alt="icon-1">
+                                </div>
+                                <h4 class="fw-bold mt-3">Diseño audaz y resistente</h4>
+                                <p class="text-muted">Hemos actualizado la elegante y emblemática silueta de JBL. Con
+                                    dos tapas laterales y una resistente asa de metal con un llamativo agarre de
+                                    silicona naranja, puedes llevar tu música y tu estilo a cualquier parte.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <div class="text-white p-3">
+                                    <img src="./img/icon-2.png" width="60px" alt="icon-2">
+                                </div>
+                                <h4 class="fw-bold mt-3">Reproducción inalámbrica Bluetooth</h4>
+                                <p class="text-muted">¿Tu lista de reproducción o la mía? Conecta hasta dos teléfonos
+                                    móviles o tabletas al altavoz de forma inalámbrica para disfrutar vuestros sonidos
+                                    favoritos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3">
+                                <div class="text-white p-3">
+                                    <img src="./img/icon-3.png" width="60px" alt="icon-3">
+                                </div>
+                                <h4 class="fw-bold mt-3">PartyBoost sube el nivel de la fiesta</h4>
+                                <p class="text-muted">PartyBoost te permite conectar dos altavoces JBL compatibles para
+                                    disfrutar de un sonido estéreo o más de dos para crear un entorno de sonido de
+                                    infinitas posibilidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Premiação -->
+                <section class="container-fluid bg-primary py-5 text-center text-white">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="./img/JBL-PDP_AwardBanner_Boombox3_Desktop_1052x480px@2x.jpg"
+                                    class="img-fluid rounded shadow-lg" alt="JBL Boombox 3 - Prêmio de Design">
+                            </div>
+                            <div class="col-md-6 text-white">
+                                <h2 class="fw-bold">Design Premiado</h2>
+                                <p class="fs-5">O JBL Boombox 3 venceu o <span class="fw-bold">iF DESIGN AWARD
+                                        2022</span>, um dos prêmios mais prestigiados do mundo em design de produtos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Detalhes e Downloads -->
+                <section class="container py-5">
+                    <h3 class="fw-bold text-center">Detalles y descargas</h3>
+                    <div class="bg-danger mx-auto" style="width: 60px; height: 3px;"></div>
+                    <p class="text-center mt-3">N.º de artículo <span class="fw-bold">JBLBOOMBOX3BLKAM</span></p>
+
+                    <div class="accordion mt-4" id="accordionDetalhes">
+                        <!-- Descrição do Produto -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#descricao">
+                                    Descripción del producto
+                                </button>
+                            </h2>
+                            <div id="descricao" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionDetalhes">
+                                <div class="accordion-body">
+                                    <strong>Sonido arrollador. Durante todo el día.</strong>
+                                    <p>Hemos mejorado aún más nuestro altavoz Bluetooth portátil más potente...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Características Gerais -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#caracteristicasGerais">
+                                    Características generales
+                                </button>
+                            </h2>
+                            <div id="caracteristicasGerais" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionDetalhes">
+                                <div class="accordion-body">
+                                    <p>Potencia de salida: 1x80W RMS-subwoofer + 2x40W RMS-midrange + 2x10W
+                                        RMS-tweeter...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Medidas -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#medidas">
+                                    Medidas
+                                </button>
+                            </h2>
+                            <div id="medidas" class="accordion-collapse collapse" data-bs-parent="#accordionDetalhes">
+                                <div class="accordion-body">
+                                    <p>Dimensões (cm): 48.2 x 25.7 x 20.0</p>
+                                    <p>Peso: 6.7 kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Produtos Relacionados -->
+                <section class="container py-5">
+                    <h2 class="fw-bold text-center">También te puede interesar</h2>
+                    <div class="bg-danger mx-auto mb-4" style="width: 60px; height: 3px;"></div>
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <!-- Produto 1 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./img/prod-rel1.jpg" class="card-img-top" alt="JBL Charge 5">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">🏆</span>
+                                    <span class="badge bg-secondary position-absolute top-0 end-0 m-2">3D</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="fw-bold">JBL Charge 5</h5>
+                                    <p class="text-muted">Altavoz portátil resistente al agua con batería integrada</p>
+                                    <p class="text-danger fs-4 fw-bold">S/649 <span class="badge bg-danger">AHORRE
+                                            19%</span></p>
+                                    <p class="text-muted"><del>S/799</del> ⭐⭐⭐⭐⭐ (2731)</p>
+                                    <p class="text-success">Envío gratis! <a href="index.html">(Detalles)</a></p>
+                                    <button class="btn btn-danger w-100">Ver Más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 2 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./img/prod-rel12.jpg" class="card-img-top" alt="JBL Xtreme 4">
+                                    <span class="badge bg-warning position-absolute top-0 start-0 m-2">NEW</span>
+                                    <span class="badge bg-secondary position-absolute top-0 end-0 m-2">3D</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="fw-bold">JBL Xtreme 4</h5>
+                                    <p class="text-muted">Altavoz portátil resistente al agua con sonido increíble</p>
+                                    <p class="text-danger fs-4 fw-bold">S/1.499 <span class="badge bg-danger">AHORRE
+                                            6%</span></p>
+                                    <p class="text-muted"><del>S/1.599</del> ⭐⭐⭐⭐⭐ (252)</p>
+                                    <p class="text-success">Envío gratis! <a href="index.html">(Detalles)</a></p>
+                                    <button class="btn btn-danger w-100">Ver Más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 3 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./img/prod-rel3.jpg" class="card-img-top" alt="JBL Partybox 710">
+                                    <span class="badge bg-secondary position-absolute top-0 start-0 m-2">3D</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="fw-bold">JBL Partybox 710</h5>
+                                    <p class="text-muted">Altavoz para fiestas con sonido potente de 800W</p>
+                                    <p class="text-danger fs-4 fw-bold">S/3.499</p>
+                                    <p class="text-muted">⭐⭐⭐⭐⭐ (440)</p>
+                                    <p class="text-success">Envío gratis! <a href="index.html">(Detalles)</a></p>
+                                    <button class="btn btn-danger w-100">Ver Más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 4 -->
+                        <div class="col">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./img/prod-rel14.jpg" class="card-img-top" alt="JBL Authentics 500">
+                                    <span class="badge bg-warning position-absolute top-0 start-0 m-2">NEW</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="fw-bold">JBL Authentics 500</h5>
+                                    <p class="text-muted">Altavoz inteligente de alta fidelidad y diseño retro</p>
+                                    <p class="text-danger fs-4 fw-bold">S/2.899</p>
+                                    <p class="text-muted">⭐⭐⭐⭐⭐ (185)</p>
+                                    <p class="text-success">Envío gratis! <a href="index.html">(Detalles)</a></p>
+                                    <button class="btn btn-danger w-100">Ver Más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Opiniões e FAQ em Accordion -->
+                <section class="container py-5">
+                    <h2 class="fw-bold text-center">Opiniones y FAQ</h2>
+                    <div class="bg-danger mx-auto mb-4" style="width: 60px; height: 3px;"></div>
+
+                    <div class="accordion" id="accordionFAQ">
+                        <!-- Reseñas de los clientes -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong>Reseñas de los clientes</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p class="fw-bold">Calificación general</p>
+                                    <h2 class="fw-bold">4.2 ⭐⭐⭐⭐☆</h2>
+                                    <p><a href="index.html">354 reseñas</a></p>
+                                    <p class="fw-bold">Reseñar este producto</p>
+                                    <div class="d-flex gap-2">
+                                        <i class="fa-regular fa-star fa-2x text-warning"></i>
+                                        <i class="fa-regular fa-star fa-2x text-warning"></i>
+                                        <i class="fa-regular fa-star fa-2x text-warning"></i>
+                                        <i class="fa-regular fa-star fa-2x text-warning"></i>
+                                        <i class="fa-regular fa-star fa-2x text-warning"></i>
+                                    </div>
+                                    <p class="text-muted">Para añadir una reseña, será necesario un correo electrónico
+                                        válido con fines de verificación.</p>
+
+                                    <p class="fw-bold">Seleccionar una fila para filtrar reseñas.</p>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" style="width: 70%">5 estrellas (234)</div>
+                                    </div>
+                                    <div class="progress mt-2" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" style="width: 15%">4 estrellas (41)</div>
+                                    </div>
+                                    <div class="progress mt-2" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" style="width: 10%">3 estrellas (26)</div>
+                                    </div>
+                                    <div class="progress mt-2" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" style="width: 5%">2 estrellas (18)</div>
+                                    </div>
+                                    <div class="progress mt-2" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" style="width: 7%">1 estrella (35)</div>
+                                    </div>
+
+                                    <!-- Resenhas destacadas -->
+                                    <h2 class="py-2">
+                                        <strong>Reseñas destacadas</strong>
+                                    </h2>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="border p-3 rounded shadow-sm">
+                                                <p class="fw-bold text-warning">⭐⭐⭐⭐⭐ Unique sound</p>
+                                                <p class="fw-bold">Procaliber</p>
+                                                <p class="text-muted">hace 2 años</p>
+                                                <p>I received the bb3 and I am very satisfied and happy. Unique sound
+                                                    with sophisticated...</p>
+                                                <a href="index.html">Mostrar reseña completa</a>
+                                                <p class="text-danger mt-2"><i class="fa fa-thumbs-up"></i> 74 personas
+                                                    han encontrado útil esta información</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="border p-3 rounded shadow-sm">
+                                                <p class="fw-bold text-warning">⭐⭐⭐☆☆ One thing ruins all good
+                                                    impression</p>
+                                                <p class="fw-bold">Roman_P</p>
+                                                <p class="text-muted">hace 2 años</p>
+                                                <p>The speaker is good in sound - I previously owned HK Go&Play and this
+                                                    one sounds not a b...</p>
+                                                <a href="index.html">Mostrar reseña completa</a>
+                                                <p class="text-danger mt-2"><i class="fa fa-thumbs-up"></i> 71 personas
+                                                    han encontrado útil esta información</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </section>
+            </main>
+
+            <!-- Aside fixo no desktop -->
+            <aside class="col-lg-4 sticky-aside bg-white border rounded shadow-sm d-none d-lg-block p-4">
+                <h2 class="fw-bold">JBL Boombox 3</h2>
+                <p class="text-secondary">Altavoz portátil</p>
+                <div class="d-flex align-items-center">
+                    <span class="text-warning me-2">
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </span>
+                    <span class="text-secondary">4.2 (354 avaliações) - <a href="index.html">Escreva uma
+                            resenha</a></span>
+                </div>
+                <p class="fs-4 mt-3 text-danger fw-bold">S/ 109
+                    <span class="badge bg-danger ms-2">Ahorre 70%</span>
+                </p>
+                <p class="text-muted"><del>S/ 2.099</del></p>
+                <p>Hasta 12 cuotas sin interés de S/9,83 con tarjeta de crédito</p>
+
+                <!-- Botão de compra e seletor de quantidade -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="ind.html" class="btn btn-danger w-100" onclick="trackBeginCheckout(event)">
+                        <i class="fa fa-shopping-cart"></i> COMPRAR
+                    </a>
+                    <div class="input-group" style="width: 100px;">
+                        <button class="btn btn-outline-secondary" onclick="updateQuantity(-1)">-</button>
+                        <input type="text" id="productQuantity" class="form-control text-center" value="1">
+                        <button class="btn btn-outline-secondary" onclick="updateQuantity(1)">+</button>
+                    </div>
+                </div>
+                <p class="mt-2 text-success"><i class="fa fa-truck"></i> Pagos con débito o crédito envío gratis en 24 horas a todo el Perú</p>
+
+                <!-- Serviços adicionais -->
+                <div class="row mt-4 text-center">
+                    <div class="col-md-4">
+                        <div class="py-3">
+                            <i class="fa fa-shipping-fast fa-2x text-danger"></i>
+                            <p class="mt-2">Serviço de entrega</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="py-3">
+                            <i class="fa fa-sync-alt fa-2x text-danger"></i>
+                            <p class="mt-2">Garantia de fábrica</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="py-3">
+                            <i class="fa fa-headset fa-2x text-danger"></i>
+                            <p class="mt-2">Suporte gratuito</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Botão fixo no mobile -->
+    <div class="fixed-buy-btn d-lg-none">
+        <div class="container">
+            <a href="ind.html" class="btn btn-danger w-100 py-3 fw-bold text-white text-center"
+                onclick="trackBeginCheckout(event)">
+                COMPRAR
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Rodapé -->
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Tienda</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Parlantes</a></li>
+                        <li class="mb-4"><a href="index.html">Audifonos</a></li>
+                        <li class="mb-4"><a href="index.html">Audio para Hogar</a></li>
+                        <li class="mb-4"><a href="index.html">Gaming</a></li>
+                        <li class="mb-4"><a href="index.html">Ofertas</a></li>
+                        <li class="mb-4"><a href="index.html">Compra Original</a></li>
+                        <li class="mb-4"><a href="index.html">Descubre JBL</a></li>
+                        <li class="mb-4"><a href="index.html">Lanzamientos JBL</a></li>
+                        <li class="mb-4"><a href="index.html">Nuestra Historia</a></li>
+                        <li class="mb-4"><a href="index.html">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Soporte</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-4"><a href="index.html">Estado del Pedido</a></li>
+                        <li class="mb-4"><a href="index.html">Soporte de Producto</a></li>
+                        <li class="mb-4"><a href="index.html">Compra Auténtico</a></li>
+                        <li class="mb-4"><a href="index.html">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Sobre Nosotros</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-4"><a href="index.html">Harman Corporate</a></li>
+                        <li class="mb-4"><a href="index.html">Política de Privacidad</a></li>
+                        <li class="mb-4"><a href="index.html">Política de Cookies</a></li>
+                        <li class="mb-4"><a href="index.html">Cookie Settings</a></li>
+                        <li class="mb-4"><a href="index.html">Términos y Condiciones</a></li>
+                        <li class="mb-4"><a href="index.html">Términos y Condiciones de Venta</a></li>
+                        <li class="mb-4"><a href="index.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Contacte con Nosotros</h5>
+                    <p>Horario de Atención<br>De Lunes a Viernes<br>08:00 a.m a 6:00 p.m<br>Sábados<br>09:00 a.m a 12:00
+                        p.m</p>
+                    <h6 class="fw-bold">Sostenibilidad 🌿</h6>
+                    <p><a href="index.html">Conoce nuestros esfuerzos</a></p>
+                    <div class="d-flex gap-3">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                        <i class="fa-brands fa-youtube fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class=" footer-brands">
+                <img src="./img/footer-logo-1.png" alt="Harman">
+                <img src="./img/footer-logo-akg.png" alt="AKG">
+                <img src="img/footer-logo-hk.png" alt="Harman Kardon">
+                <img src="./img/footer-logo-infinity.png" alt="Infinity">
+                <img src="./img/footer-logo-jbl.png" alt="JBL">
+                <img src="./img/footer-logo-lexicon.png" alt="Lexicon">
+                <img src="./img/footer-logo-levinson.png" alt="Mark Levinson">
+                <img src="./img/footer-logo-revel.png" alt="Revel">
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 Harman International Industries, Incorporated. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* Função para trocar a imagem do carousel ao clicar nas miniaturas */
+        function trocarImagem(index) {
+            let carousel = document.querySelector("#carouselProduto");
+            let bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+            bsCarousel.to(index);
+        }
+
+        /* Garante que o botão fixo de compra seja visível */
+        document.addEventListener("DOMContentLoaded", function () {
+            const buyBtn = document.querySelector(".fixed-buy-btn");
+            if (buyBtn) {
+                buyBtn.style.display = "block";
+            }
+        });
+
+
+        function trackBeginCheckout(event) {
+            event.preventDefault(); // Impede o redirecionamento imediato
+
+            const quantity = document.getElementById('productQuantity').value;
+
+            fbq('track', 'InitiateCheckout', {
+                content_name: 'JBL Boombox 3',
+                content_category: 'Parlantes',
+                content_ids: ['JBLBOOMBOX3BLKAM'],
+                content_type: 'product',
+                value: 109 * quantity,
+                currency: 'BRL',
+                num_items: quantity
+            });
+
+            // Aguarda o evento ser enviado antes do redirecionamento
+            fbq('track', 'InitiateCheckout', {}, { eventID: 'checkout' });
+
+            setTimeout(() => {
+                window.location.href = "ind.html";
+            }, 500);
+        }
+
+        function updateQuantity(change) {
+            let quantityInput = document.getElementById('productQuantity');
+            let currentQuantity = parseInt(quantityInput.value) || 1;
+            let newQuantity = currentQuantity + change;
+            if (newQuantity < 1) newQuantity = 1; // Impede valores abaixo de 1
+            quantityInput.value = newQuantity;
+        }
+
+    </script>
+
+</body>
+
+</html>
