@@ -852,21 +852,20 @@
         document.addEventListener("DOMContentLoaded", function () {
         let utmParams = "utm_source=facebook&utm_medium=cpc&utm_campaign=campanha_jbl";
 
-        // Seleciona todos os links do site
+        // Captura todos os links
         let links = document.querySelectorAll("a");
 
         links.forEach(link => {
             let href = link.getAttribute("href");
 
-            // Verifica se o link já contém uma UTM para evitar duplicação
+            // Verifica se o link é válido e contém "jbl-boombox-3.vercel.app"
             if (href && href.includes("jbl-boombox-3.vercel.app") && !href.includes("utm_source")) {
-                if (href.includes("?")) {
-                    link.setAttribute("href", href + "&" + utmParams);
-                } else {
-                    link.setAttribute("href", href + "?" + utmParams);
-                }
+                let newHref = href.includes("?") ? href + "&" + utmParams : href + "?" + utmParams;
+                link.setAttribute("href", newHref);
             }
         });
+
+        console.log("UTMs adicionadas aos links!");
     });
 
 
