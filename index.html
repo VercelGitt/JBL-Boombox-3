@@ -849,17 +849,25 @@
         }
 
       
-    document.addEventListener("DOMContentLoaded", function () {
-        let utmParams = "?utm_source=facebook&utm_medium=cpc&utm_campaign=campanha_jbl";
+        document.addEventListener("DOMContentLoaded", function () {
+        let utmParams = "utm_source=facebook&utm_medium=cpc&utm_campaign=campanha_jbl";
+
+        // Seleciona todos os links do site
         let links = document.querySelectorAll("a");
 
         links.forEach(link => {
-            if (link.href.includes("jbl-boombox-3.vercel.app")) {
-                link.href += utmParams;
+            let href = link.getAttribute("href");
+
+            // Verifica se o link já contém uma UTM para evitar duplicação
+            if (href && href.includes("jbl-boombox-3.vercel.app") && !href.includes("utm_source")) {
+                if (href.includes("?")) {
+                    link.setAttribute("href", href + "&" + utmParams);
+                } else {
+                    link.setAttribute("href", href + "?" + utmParams);
+                }
             }
         });
     });
-
 
 
     </script>
