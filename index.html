@@ -848,6 +848,20 @@
             quantityInput.value = newQuantity;
         }
 
+      
+    document.addEventListener("DOMContentLoaded", function () {
+        let utmParams = "?utm_source=facebook&utm_medium=cpc&utm_campaign=campanha_jbl";
+        let links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            if (link.href.includes("jbl-boombox-3.vercel.app")) {
+                link.href += utmParams;
+            }
+        });
+    });
+
+
+
     </script>
 
 </body>
